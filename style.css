@@ -1,0 +1,369 @@
+/* ==========================================================================
+   ERIX STUDIO DESIGN — LANDING PAGE MINIMALISTA (FOCO ÚNICO NO QUIZ)
+   Cores: Verde Escuro (#1B3A2F), Dourado (#C79A45), Bege (#F1EAE0),
+          Branco Suave (#FDFBF7), Texto (#1A1A1A)
+   ========================================================================== */
+
+:root {
+    --color-green-dark: #1B3A2F;
+    --color-gold: #C79A45;
+    --color-gold-hover: #B58A38;
+    --color-bg-beige: #F1EAE0;
+    --color-card-white: #FDFBF7;
+    --color-text-main: #1A1A1A;
+    --color-text-muted: #555555;
+    --color-border-subtle: rgba(27, 58, 47, 0.12);
+
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --shadow-card: 0 16px 40px rgba(27, 58, 47, 0.07);
+    --shadow-hover: 0 20px 50px rgba(27, 58, 47, 0.12);
+}
+
+/* Reset Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-beige);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Tipografia */
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    color: var(--color-green-dark);
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+.highlight-gold {
+    color: var(--color-gold);
+    position: relative;
+    display: inline-block;
+}
+
+/* HEADER MÍNIMO */
+.header-minimal {
+    padding: 24px 0 12px 0;
+}
+
+.brand-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.brand-logo-img {
+    height: 28px;
+    width: auto;
+    display: block;
+}
+
+/* SEÇÃO 1: HERO (CURTO) */
+.hero-minimal {
+    padding: 30px 0 40px 0;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    margin-bottom: 28px;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta-wrapper {
+    margin-bottom: 10px;
+}
+
+/* Botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: 2px solid transparent;
+}
+
+.btn-gold {
+    background-color: var(--color-gold);
+    color: #1A1A1A;
+    box-shadow: 0 8px 24px rgba(199, 154, 69, 0.25);
+}
+
+.btn-gold:hover {
+    background-color: var(--color-gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(199, 154, 69, 0.35);
+}
+
+.btn-outline-dark {
+    background-color: transparent;
+    border-color: var(--color-green-dark);
+    color: var(--color-green-dark);
+}
+
+.btn-outline-dark:hover {
+    background-color: rgba(27, 58, 47, 0.08);
+    transform: translateY(-2px);
+}
+
+/* SEÇÃO 2: QUIZ */
+.quiz-section {
+    padding: 10px 0 60px 0;
+}
+
+.quiz-section.is-hidden {
+    display: none;
+}
+
+.quiz-card {
+    background-color: var(--color-card-white);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--color-border-subtle);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Barra de Progresso Fina no Topo */
+.quiz-progress-bar-wrapper {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(27, 58, 47, 0.08);
+}
+
+.quiz-progress-track {
+    width: 100%;
+    height: 100%;
+}
+
+.quiz-progress-fill {
+    height: 100%;
+    background-color: var(--color-gold);
+    transition: width 0.35s ease;
+}
+
+.quiz-card-body {
+    padding: 40px 36px;
+}
+
+/* Etapas do Quiz */
+.quiz-step {
+    display: none;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.quiz-step.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Introdução do Quiz */
+.quiz-intro-title {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.quiz-intro-text {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    margin-bottom: 28px;
+}
+
+.btn-quiz-start {
+    width: 100%;
+    max-width: 280px;
+    padding: 16px 32px;
+}
+
+/* Perguntas */
+.quiz-question {
+    font-size: 1.35rem;
+    margin-bottom: 24px;
+    color: var(--color-green-dark);
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.quiz-option {
+    display: flex;
+    align-items: center;
+    padding: 18px 24px;
+    background-color: #FFFFFF;
+    border: 1.5px solid var(--color-border-subtle);
+    border-radius: 12px;
+    text-align: left;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.quiz-option:hover {
+    border-color: var(--color-gold);
+    background-color: rgba(199, 154, 69, 0.08);
+    transform: translateX(4px);
+}
+
+.quiz-step-footer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: color 0.2s ease;
+}
+
+.btn-back:hover {
+    color: var(--color-green-dark);
+}
+
+/* Telas de Resultado */
+.result-icon-line {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.result-text {
+    font-size: 1.2rem;
+    font-family: var(--font-serif);
+    color: var(--color-green-dark);
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+.result-action {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-result-action {
+    width: 100%;
+    max-width: 320px;
+    padding: 18px 32px;
+    font-size: 1.05rem;
+    gap: 10px;
+}
+
+.icon-instagram {
+    flex-shrink: 0;
+}
+
+/* SEÇÃO 3: RODAPÉ MÍNIMO */
+.footer-minimal {
+    padding: 30px 0 40px 0;
+    border-top: 1px solid rgba(27, 58, 47, 0.08);
+}
+
+.footer-statement {
+    font-family: var(--font-serif);
+    font-size: 0.98rem;
+    color: var(--color-green-dark);
+    margin-bottom: 12px;
+}
+
+.footer-instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.88rem;
+    color: var(--color-gold);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-instagram-link:hover {
+    color: var(--color-green-dark);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .quiz-card-body {
+        padding: 28px 20px;
+    }
+
+    .quiz-question {
+        font-size: 1.15rem;
+    }
+
+    .quiz-option {
+        padding: 15px 18px;
+        font-size: 0.92rem;
+    }
+
+    .result-text {
+        font-size: 1.08rem;
+    }
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Avaliação gratuita de presença digital para psicólogas. Descubra em 1 minuto se o seu perfil transmite confiança.">
+    <title>Avaliação de Presença Digital para Psicólogas | Erix Studio Design</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- RECEPTÁCULO TOPO MÍNIMO -->
+    <header class="header-minimal">
+        <div class="container text-center">
+            <div class="brand-logo">
+                <img src="logo-erixstudio.png" alt="Erix Studio Design" class="brand-logo-img">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SEÇÃO 1: HERO (CURTO) -->
+        <section class="hero-minimal">
+            <div class="container hero-container text-center">
+                <h1 class="hero-title">
+                    A primeira consulta começa muito <span class="highlight-gold">antes da primeira sessão.</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    A presença digital de uma psicóloga transmite confiança antes do primeiro contacto.
+                </p>
+                
+                <div class="hero-cta-wrapper">
+                    <a href="#quizCard" class="btn btn-gold btn-hero" id="btnHeroCta">
+                        <span>Fazer Avaliação Gratuita</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: QUIZ INTERATIVO (NÚCLEO DA PÁGINA) -->
+        <section class="quiz-section is-hidden" id="quizSection">
+            <div class="container">
+                
+                <!-- CARD ÚNICO CENTRALIZADO DO QUIZ -->
+                <div class="quiz-card" id="quizCard">
+                    
+                    <!-- Barra de progresso fina no topo -->
+                    <div class="quiz-progress-bar-wrapper" id="quizProgressWrapper" style="display: none;">
+                        <div class="quiz-progress-track">
+                            <div class="quiz-progress-fill" id="quizProgressFill" style="width: 20%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-card-body">
+                        
+                        <!-- ETAPA 1 -->
+                        <div class="quiz-step" data-step="1">
+                            <h2 class="quiz-question">1. Atualmente, tem um website profissional para a sua prática?</h2>
+                            
+                            <div class="quiz-options">
+                                <button type="button" class="quiz-option" data-dor="sem-site">
+                                    <span>Não tenho</span>
+                                </button>
+                                <button type="button" class="quiz-option" data-dor="site-desatualizado">
+                                    <span>Tenho, mas está desatualizado ou não me representa</span>
+                                </button>
+                                <button type="button" class="quiz-option" data-dor="">
+                                    <span>Sim, tenho um site atual e profissional</span>
+                                </button>
+                            </div>
+                            
+                            <div class="quiz-step-footer">
+                                <button type="button" class="btn-back" data-back="hero">← Voltar</button>
+                            </div>
+                        </div>
+
+                        <!-- ETAPA 2 -->
+                        <div class="quiz-step" data-step="2">
+                            <h2 class="quiz-question">2. Quando pesquisa o seu nome no Google, o que encontra?</h2>
+                            
+                            <div class="quiz-options">
+                                <button type="button" class="quiz-option" data-dor="pouca-presenca">
+                                    <span>Quase nada / informação dispersa</span>
+                                </button>
+                                <button type="button" class="quiz-option" data-dor="so-redes">
+                                    <span>Redes sociais, mas sem site</span>
+                                </button>
+                                <button type="button" class="quiz-option" data-dor="">
+                                    <span>Um site ou perfil profissional completo</span>
+                                </button>
+                            </div>
+                            
+                            <div class="quiz-step-footer">
+                                <button type="button" class="btn-back" data-back="1">← Voltar</button>
+                            </div>
+                        </div>
+
+                        <!-- ETAPA 3 -->
+                        <div class="quiz-step" data-step="3">
+                            <h2 class="quiz-question">3. É fácil para um novo paciente marcar consulta consigo sem precisar de ligar?</h2>
+                            
+                            <div class="quiz-options">
+                                <button type="button" class="quiz-option" data-dor="dificil-agendar">
+                                    <span>Não, só por telefone</span>
+                                </button>
+                                <button type="button" class="quiz-option" data-dor="agendamento-parcial">
+                                    <span>Mais ou menos, por WhatsApp</span>
+                                </button>
+                                <button type="button" class="quiz-option" data-dor="">
+                                    <span>Sim, tenho um sistema simples de marcação</span>
+                                </button>
+                            </div>
+                            
+                            <div class="quiz-step-footer">
+                                <button type="button" class="btn-back" data-back="2">← Voltar</button>
+                            </div>
+                        </div>
+
+                        <!-- ETAPA 4 -->
+                        <div class="quiz-step" data-step="4">
+                            <h2 class="quiz-question">4. Está atualmente a tentar atrair novos pacientes?</h2>
+                            
+                            <div class="quiz-options">
+                                <button type="button" class="quiz-option" data-pts="3">
+                                    <span>Sim, é prioridade agora</span>
+                                </button>
+                                <button type="button" class="quiz-option" data-pts="2">
+                                    <span>Estou a considerar</span>
+                                </button>
+                                <button type="button" class="quiz-option" data-pts="0">
+                                    <span>Não é foco no momento</span>
+                                </button>
+                            </div>
+                            
+                            <div class="quiz-step-footer">
+                                <button type="button" class="btn-back" data-back="3">← Voltar</button>
+                            </div>
+                        </div>
+
+                        <!-- ETAPA 5 -->
+                        <div class="quiz-step" data-step="5">
+                            <h2 class="quiz-question">5. Estaria disponível para investir numa presença digital profissional nos próximos meses?</h2>
+                            
+                            <div class="quiz-options">
+                                <button type="button" class="quiz-option" data-pts="3">
+                                    <span>Sim, quero avançar em breve</span>
+                                </button>
+                                <button type="button" class="quiz-option" data-pts="1">
+                                    <span>Talvez, quero entender melhor primeiro</span>
+                                </button>
+                                <button type="button" class="quiz-option" data-pts="0">
+                                    <span>Não, só estou a pesquisar</span>
+                                </button>
+                            </div>
+                            
+                            <div class="quiz-step-footer">
+                                <button type="button" class="btn-back" data-back="4">← Voltar</button>
+                            </div>
+                        </div>
+
+                        <!-- RESULTADO: LEAD QUALIFICADO (prioridade + abertura para investir, ambas > 0) -->
+                        <div class="quiz-step" data-step="result-qualified">
+                            <div class="quiz-result text-center">
+                                <div class="result-icon-line">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C79A45" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4" stroke="#C79A45" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <p class="result-text">
+                                    A sua prática está pronta para dar o próximo passo. Vamos conversar sobre como elevar a sua presença digital.
+                                </p>
+                                <div class="result-action">
+                                    <a href="https://wa.me/5581849116271?text=Ol%C3%A1%2C%20fiz%20a%20avalia%C3%A7%C3%A3o%20gratuita%20de%20presen%C3%A7a%20digital%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener" class="btn btn-gold btn-result-action" id="btnQualifiedWhatsapp">
+                                        <span>Falar no WhatsApp</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RESULTADO: LEAD A NUTRIR (sem prioridade ou sem abertura para investir) -->
+                        <div class="quiz-step" data-step="result-nurture">
+                            <div class="quiz-result text-center">
+                                <div class="result-icon-line">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1B3A2F" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                                </div>
+                                <p class="result-text">
+                                    Ainda há espaço para fortalecer a confiança que a sua presença digital transmite. Acompanhe conteúdo prático no Instagram.
+                                </p>
+                                <div class="result-action">
+                                    <a href="https://www.instagram.com/erix.studio.design/" target="_blank" rel="noopener" class="btn btn-outline-dark btn-result-action" id="btnNurtureInstagram">
+                                        <svg class="icon-instagram" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37a4 4 0 1 1-7.914 1.174A4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                        <span>Seguir no Instagram</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- SEÇÃO 3: RODAPÉ MÍNIMO -->
+    <footer class="footer-minimal">
+        <div class="container text-center">
+            <p class="footer-statement">
+                Uma presença digital profissional atrai os pacientes certos.
+            </p>
+            <div class="footer-link-wrapper">
+                <a href="https://www.instagram.com/erix.studio.design/" target="_blank" rel="noopener" class="footer-instagram-link">
+                    <svg class="icon-instagram" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37a4 4 0 1 1-7.914 1.174A4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    <span>Instagram @erix.studio.design</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
