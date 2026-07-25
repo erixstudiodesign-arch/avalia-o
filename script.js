@@ -14,7 +14,7 @@
  * muita intenção de compra seja descartado para o Instagram.
  */
 
-const WHATSAPP_NUMBER = "5581849116271";
+const WHATSAPP_NUMBER = "5581984916271";
 const INSTAGRAM_URL = "https://www.instagram.com/erix.studio.design/";
 
 // Ordem de prioridade: a primeira dor encontrada nesta lista, entre as
