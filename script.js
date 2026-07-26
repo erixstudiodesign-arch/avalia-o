@@ -93,17 +93,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Botão único da landing page: revela o quiz e abre já na pergunta 1
-    function startQuizFlow(e) {
+    // Pergunta 1 já visível ao carregar a página, sem precisar de um clique extra
+    showStep(1);
+
+    // Botão do hero: apenas desloca a vista até ao quiz, que já está visível
+    function scrollToQuiz(e) {
         e.preventDefault();
-        quizSection.classList.remove("is-hidden");
-        showStep(1);
         if (quizCard) {
             quizCard.scrollIntoView({ behavior: "smooth", block: "center" });
         }
     }
 
-    if (btnHeroCta) btnHeroCta.addEventListener("click", startQuizFlow);
+    if (btnHeroCta) btnHeroCta.addEventListener("click", scrollToQuiz);
 
     // Seleção das opções de resposta
     document.querySelectorAll(".quiz-option").forEach(optionBtn => {
@@ -131,7 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
         backBtn.addEventListener("click", (e) => {
             const backStep = e.currentTarget.dataset.back;
             if (backStep === "hero") {
-                quizSection.classList.add("is-hidden");
                 window.scrollTo({ top: 0, behavior: "smooth" });
             } else {
                 showStep(backStep);
