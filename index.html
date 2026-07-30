@@ -166,18 +166,60 @@
                             </div>
                         </div>
 
-                        <!-- RESULTADO: LEAD QUALIFICADO (prioridade + abertura para investir, ambas > 0) -->
-                        <div class="quiz-step" data-step="result-qualified">
-                            <div class="quiz-result text-center">
-                                <div class="result-icon-line">
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C79A45" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4" stroke="#C79A45" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                </div>
-                                <p class="result-text">
-                                    A sua prática está pronta para dar o próximo passo. Vamos conversar sobre como elevar a sua presença digital.
+                        <!-- ETAPA DE ANÁLISE (LEAD QUALIFICADO) -->
+                        <div class="quiz-step" data-step="analyzing">
+                            <div class="quiz-analyzing text-center">
+                                <div class="analyzing-spinner"></div>
+                                <p class="analyzing-title">A analisar as suas respostas...</p>
+                                <p class="analyzing-subtitle">Estamos a preparar a sua avaliação personalizada.</p>
+                            </div>
+                        </div>
+
+                        <!-- RESULTADO PERSONALIZADO (LEAD QUALIFICADO) -->
+                        <div class="quiz-step" data-step="result-analysis">
+                            <div class="quiz-result-analysis text-center">
+                                <h2 class="result-analysis-title">Avaliação da sua Presença Profissional Online</h2>
+                                <p class="result-analysis-intro">
+                                    Com base nas suas respostas, analisámos como a sua presença online poderá estar a ser percebida por potenciais pacientes.
                                 </p>
-                                <div class="result-action">
-                                    <a href="https://wa.me/5581984916271?text=Ol%C3%A1%2C%20fiz%20a%20avalia%C3%A7%C3%A3o%20gratuita%20de%20presen%C3%A7a%20digital%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener" class="btn btn-gold btn-result-action" id="btnQualifiedWhatsapp">
-                                        <span>Falar no WhatsApp</span>
+
+                                <div class="score-circle-wrapper">
+                                    <svg class="score-circle" viewBox="0 0 120 120">
+                                        <circle class="score-circle-bg" cx="60" cy="60" r="52"></circle>
+                                        <circle class="score-circle-fill" id="scoreCircleFill" cx="60" cy="60" r="52"></circle>
+                                    </svg>
+                                    <div class="score-circle-label">
+                                        <span id="scoreNumber">0</span><span class="score-max">/100</span>
+                                    </div>
+                                </div>
+
+                                <p class="score-classification" id="scoreClassification"></p>
+
+                                <div class="score-bar-section">
+                                    <div class="score-bar-labels">
+                                        <span>Presença Profissional</span>
+                                        <span id="scoreBarNumber">0/100</span>
+                                    </div>
+                                    <div class="score-bar-track">
+                                        <div class="score-bar-fill" id="scoreBarFill" style="width: 0%;"></div>
+                                    </div>
+                                </div>
+
+                                <div class="diagnosis-box">
+                                    <p class="diagnosis-title">O que identificámos</p>
+                                    <ul class="diagnosis-list" id="diagnosisList"></ul>
+                                </div>
+
+                                <div class="next-step-box">
+                                    <p class="next-step-title">Próximo passo</p>
+                                    <p class="next-step-text">
+                                        Com base na sua avaliação, acredito que faz sentido mostrar-lhe uma proposta personalizada para o seu caso.
+                                    </p>
+                                    <p class="next-step-redirect">
+                                        Será encaminhado automaticamente para o WhatsApp em <span id="countdownNumber">3</span>...
+                                    </p>
+                                    <a href="#" class="next-step-fallback-link" id="btnAnalysisWhatsappFallback">
+                                        Se não abrir automaticamente, toque aqui
                                     </a>
                                 </div>
                             </div>
