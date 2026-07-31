@@ -115,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const quizCard = document.getElementById("quizCard");
     const progressWrapper = document.getElementById("quizProgressWrapper");
     const progressFill = document.getElementById("quizProgressFill");
-    const btnHeroCta = document.getElementById("btnHeroCta");
 
     function showStep(stepKey) {
         quizSteps.forEach(step => {
@@ -137,16 +136,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Pergunta 1 já visível ao carregar a página, sem precisar de um clique extra
     showStep(1);
-
-    // Botão do hero: apenas desloca a vista até ao quiz, que já está visível
-    function scrollToQuiz(e) {
-        e.preventDefault();
-        if (quizCard) {
-            quizCard.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-    }
-
-    if (btnHeroCta) btnHeroCta.addEventListener("click", scrollToQuiz);
 
     // Seleção das opções de resposta
     document.querySelectorAll(".quiz-option").forEach(optionBtn => {
