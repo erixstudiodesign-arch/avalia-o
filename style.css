@@ -42,7 +42,13 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Container */
@@ -112,6 +118,13 @@ h1, h2, h3 {
     color: var(--color-text-muted);
     letter-spacing: 0.2px;
     margin-bottom: 4px;
+}
+
+.hero-cta-instruction {
+    font-size: 0.92rem;
+    color: var(--color-green-dark);
+    font-weight: 600;
+    margin-top: 14px;
 }
 
 /* Botões */
@@ -192,6 +205,14 @@ h1, h2, h3 {
     transition: width 0.35s ease;
 }
 
+.quiz-step-counter {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    padding: 10px 0 0 0;
+    letter-spacing: 0.3px;
+}
+
 .quiz-card-body {
     padding: 40px 36px;
 }
@@ -245,6 +266,8 @@ h1, h2, h3 {
 .quiz-option {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 12px;
     padding: 18px 24px;
     background-color: #FFFFFF;
     border: 1.5px solid var(--color-border-subtle);
@@ -257,6 +280,20 @@ h1, h2, h3 {
     color: var(--color-text-main);
     transition: all 0.2s ease;
     outline: none;
+}
+
+.quiz-option::after {
+    content: "→";
+    flex-shrink: 0;
+    color: var(--color-gold);
+    font-size: 1.1rem;
+    opacity: 0.7;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.quiz-option:hover::after {
+    transform: translateX(3px);
+    opacity: 1;
 }
 
 .quiz-option:hover {
@@ -591,5 +628,78 @@ h1, h2, h3 {
 
     .result-text {
         font-size: 1.08rem;
+    }
+}
+
+/* Ecrãs baixos (telemóveis em modo retrato): comprime o espaçamento
+   vertical para que a página inteira caiba sem precisar de scroll. */
+@media (max-height: 820px) {
+    .header-minimal {
+        padding: 14px 0 6px 0;
+    }
+
+    .brand-logo-img {
+        height: 22px;
+    }
+
+    .hero-minimal {
+        padding: 14px 0 16px 0;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+
+    .hero-cta-microcopy {
+        font-size: 0.74rem;
+        margin-bottom: 2px;
+    }
+
+    .hero-cta-instruction {
+        font-size: 0.82rem;
+        margin-top: 8px;
+    }
+
+    .quiz-section {
+        padding: 4px 0 16px 0;
+    }
+
+    .quiz-card-body {
+        padding: 18px 18px;
+    }
+
+    .quiz-question {
+        font-size: 1.02rem;
+        margin-bottom: 12px;
+    }
+
+    .quiz-options {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+
+    .quiz-option {
+        padding: 11px 14px;
+        font-size: 0.85rem;
+    }
+
+    .quiz-step-counter {
+        font-size: 0.7rem;
+        padding-top: 6px;
+    }
+
+    .footer-minimal {
+        padding: 14px 0 16px 0;
+    }
+
+    .footer-statement {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
     }
 }

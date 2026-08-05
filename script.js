@@ -115,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const quizCard = document.getElementById("quizCard");
     const progressWrapper = document.getElementById("quizProgressWrapper");
     const progressFill = document.getElementById("quizProgressFill");
+    const stepCounter = document.getElementById("quizStepCounter");
 
     function showStep(stepKey) {
         quizSteps.forEach(step => {
@@ -129,6 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
             currentStep = stepNum;
             progressWrapper.style.display = "block";
             progressFill.style.width = `${stepNum * 20}%`;
+            if (stepCounter) stepCounter.textContent = `Pergunta ${stepNum} de 5`;
         } else {
             progressWrapper.style.display = "none";
         }
