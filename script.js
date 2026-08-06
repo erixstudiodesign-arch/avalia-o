@@ -206,7 +206,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Anima o círculo e a barra até ao valor final da pontuação
     function animateScore(score) {
         const scoreNumberEl = document.getElementById("scoreNumber");
-        const scoreBarNumberEl = document.getElementById("scoreBarNumber");
         const scoreBarFillEl = document.getElementById("scoreBarFill");
         const scoreCircleFillEl = document.getElementById("scoreCircleFill");
         const scoreClassificationEl = document.getElementById("scoreClassification");
@@ -226,7 +225,6 @@ document.addEventListener("DOMContentLoaded", () => {
         scoreBarFillEl.style.width = `${score}%`;
 
         scoreNumberEl.textContent = score;
-        scoreBarNumberEl.textContent = `${score}/100`;
         scoreClassificationEl.textContent = getClassificacao(score);
     }
 

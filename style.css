@@ -48,7 +48,8 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    justify-content: safe center;
 }
 
 /* Container */
@@ -455,8 +456,6 @@ h1, h2, h3 {
 }
 
 .score-bar-labels {
-    display: flex;
-    justify-content: space-between;
     font-size: 0.85rem;
     color: var(--color-text-muted);
     margin-bottom: 8px;
@@ -701,5 +700,69 @@ h1, h2, h3 {
     .footer-statement {
         font-size: 0.85rem;
         margin-bottom: 6px;
+    }
+
+    /* Ecrã de resultado personalizado: é o mais longo do quiz, por isso
+       recebe uma compressão extra para caber melhor em ecrãs baixos. */
+    .result-analysis-title {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+
+    .result-analysis-intro {
+        font-size: 0.82rem;
+        margin-bottom: 14px;
+    }
+
+    .score-circle-wrapper {
+        width: 96px;
+        height: 96px;
+        margin: 0 auto 10px auto;
+    }
+
+    .score-circle-label #scoreNumber {
+        font-size: 1.4rem;
+    }
+
+    .score-classification {
+        font-size: 0.9rem;
+        margin-bottom: 14px;
+    }
+
+    .score-bar-section {
+        margin-bottom: 14px;
+    }
+
+    .diagnosis-box {
+        padding: 14px 16px;
+        margin-bottom: 14px;
+    }
+
+    .diagnosis-title {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .diagnosis-list {
+        gap: 6px;
+    }
+
+    .diagnosis-list li {
+        font-size: 0.82rem;
+        padding-left: 18px;
+    }
+
+    .next-step-box {
+        padding: 16px 16px;
+    }
+
+    .next-step-title {
+        font-size: 0.92rem;
+        margin-bottom: 6px;
+    }
+
+    .next-step-text {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
     }
 }
